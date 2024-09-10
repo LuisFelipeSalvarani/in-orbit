@@ -69,12 +69,8 @@
           "name": "goals_completions_goal_id_goals_id_fk",
           "tableFrom": "goals_completions",
           "tableTo": "goals",
-          "columnsFrom": [
-            "goal_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["goal_id"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
