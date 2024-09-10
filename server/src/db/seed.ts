@@ -1,6 +1,6 @@
+import dayjs from 'dayjs'
 import { client, db } from "."
-import { goals, goalsCompletions } from "./schema"
-import dayjs from "dayjs"
+import { goals, goalsCompletions } from './schema'
 
 async function seed() {
   await db.delete(goalsCompletions)
