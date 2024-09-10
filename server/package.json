@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx --env-file .env watch src/http/server.ts",
+    "dev": "tsx watch --env-file .env src/http/server.ts",
     "seed": "tsx --env-file .env src/db/seed.ts"
   },
   "keywords": [],
@@ -11,7 +11,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "^1.8.3",
     "@types/node": "^22.5.4",
     "drizzle-kit": "^0.24.2",
     "tsx": "^4.19.0",
