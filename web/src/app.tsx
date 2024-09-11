@@ -1,5 +1,3 @@
 export function App() {
-  return (
-    <h1>Hello world</h1>
-  )
+  return <h1 className="bg-black text-white text-xl">Hello world</h1>
 }
