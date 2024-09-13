@@ -7,7 +7,7 @@ export async function getWeekPendingGoals() {
   const firstDayOfWeek = dayjs().startOf('week').toDate()
   const lastDayOfWeek = dayjs().endOf('week').toDate()
 
-  const goalsCreatedUpToWeek = db.$with('gooals_created_up_to_week').as(
+  const goalsCreatedUpToWeek = db.$with('goals_created_up_to_week').as(
     db
       .select({
         id: goals.id,
@@ -35,7 +35,7 @@ export async function getWeekPendingGoals() {
       .groupBy(goalsCompletions.goalId)
   )
 
-  const pedingGoals = await db
+  const pendingGoals = await db
     .with(goalsCreatedUpToWeek, goalCompletionCounts)
     .select({
       id: goalsCreatedUpToWeek.id,
@@ -51,5 +51,5 @@ export async function getWeekPendingGoals() {
       eq(goalCompletionCounts.goalId, goalsCreatedUpToWeek.id)
     )
 
-  return { pedingGoals }
+  return { pendingGoals }
 }
